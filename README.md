@@ -5,7 +5,7 @@
 ![](https://user-images.githubusercontent.com/19412160/149653806-b2c4ca54-1986-4481-bd61-721dbd8a7967.png)
 
 Dispay login modal:
-
+ 
 ```javascript
 window.web3gl.connect();
 ```
