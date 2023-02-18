@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
+      <canvas id="unity-canvas" width=window.innerWidth height=window.innerHeight></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -57,11 +57,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/newWordleGameWeb.loader.js";
+      var loaderUrl = buildUrl + "/Release.loader.js";
       var config = {
-        dataUrl: buildUrl + "/newWordleGameWeb.data",
-        frameworkUrl: buildUrl + "/newWordleGameWeb.framework.js",
-        codeUrl: buildUrl + "/newWordleGameWeb.wasm",
+        dataUrl: buildUrl + "/Release.data",
+        frameworkUrl: buildUrl + "/Release.framework.js",
+        codeUrl: buildUrl + "/Release.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "NewWordleGame",
         productName: "NewWordleGame",
@@ -83,10 +83,10 @@
         config.devicePixelRatio = 1;
         unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "100hvw";
+        canvas.style.height = "100vh";
       }
-      canvas.style.background = "url('" + buildUrl + "/newWordleGameWeb.jpg') center / cover";
+      canvas.style.background = "url('" + buildUrl + "/Release.jpg') center / cover";
       loadingBar.style.display = "block";
 
       var script = document.createElement("script");
