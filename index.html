@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=1000 height=500></canvas>
+      <canvas id="unity-canvas" width=1920 height=1080></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -85,7 +85,6 @@
       } else {
         canvas.style.width = window.innerWidth+"px";
         canvas.style.height = window.innerHeight+"px";
-        
       }
       canvas.style.background = "url('" + buildUrl + "/Release.jpg') center / cover";
       loadingBar.style.display = "block";
