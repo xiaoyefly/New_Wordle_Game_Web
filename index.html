@@ -92,23 +92,24 @@
         // canvas.style.height = window.innerHeight+"px";
 
 
-        function resizeCanvas() {
-          if (window.innerWidth / window.innerHeight > 1920 / 1080) {
-            canvas.style.width = window.innerHeight * 1920 / 1080 + "px";
-            canvas.style.height = window.innerHeight + "px";
-          } else {
-            canvas.style.width = window.innerWidth + "px";
-            canvas.style.height = window.innerWidth * 1080 / 1920 + "px";
-          }
-
-          container.style.backgroundColor = "black";
-        }
-        window.addEventListener('resize', function() {
-          resizeCanvas();
-        });
-        resizeCanvas();
         
       }
+
+      function resizeCanvas() {
+        if (window.innerWidth / window.innerHeight > 1920 / 1080) {
+          canvas.style.width = window.innerHeight * 1920 / 1080 + "px";
+          canvas.style.height = window.innerHeight + "px";
+        } else {
+          canvas.style.width = window.innerWidth + "px";
+          canvas.style.height = window.innerWidth * 1080 / 1920 + "px";
+        }
+
+        container.style.backgroundColor = "black";
+      }
+      window.addEventListener('resize', function() {
+        resizeCanvas();
+      });
+      resizeCanvas();
       canvas.style.background = "url('" + buildUrl + "/Release.jpg') center / cover";
       loadingBar.style.display = "block";
 
